@@ -20,7 +20,10 @@ var settings = {
     'title':'WEBSITE TITLE', //Title of the bot
     'url':'http://example.com', //The url of your bot's website
     'room_link':'http://example.com', //The link to the turntable.fm room for the bot
-    'dburl':'' //Url to connect to your database
+    'dburl':'', //Url to connect to your database
+    'botname':'',  //user name of the bot (e.g. '@myBotsName')
+    'ip':'',  //ip address of the web site node will be listening on (e.g. 'xxx.xxx.xxx.xx')
+    'ga_id':'' //Google Analytics id (e.g. 'UA-12345678-1')
   }
 };
     

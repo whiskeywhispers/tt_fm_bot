@@ -1,12 +1,15 @@
-html{
+/*html{
   background: url(../images/concrete_wall_2.png);
-}
+}*/
 body{
   width: 960px;
   margin: 0 auto;
   color: #4f6b72;
   font-family: 'Lucida Sans Unicode', "Lucida Grande", sans-serif;
   clear: both;
+  background-color: #666666;
+  background-image: url('../images/bg.png');
+  background-repeat: repeat;
 }
 .clearfix{
   clear: both;
@@ -82,6 +85,22 @@ td{
   margin-right: 15px;
   display: inline;
 }
+#header img{
+  float: left;
+  margin-left: 10px;
+  border: 1px solid black;
+  width: 110px;
+  height: 130px;
+}
+#header a{
+  color: #ddd;
+  border-bottom: 1px dotted #ddd;
+  text-decoration: none;
+}
+#header a:hover{
+  color: #e5c13c;
+  border-bottom: 1px dotted #e5c13c;
+}
 a{
   color: black;
   border-bottom: 1px dotted black;
@@ -132,6 +151,19 @@ div.stats{
 #container{
   float: left;
   width: 960px;
+  
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 25px;
+  
+  -moz-border-radius: 12px; 
+  -webkit-border-radius: 12px; 
+  border-radius: 12px;          
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  
+  -webkit-box-shadow: 5px 5px 10px #555; 
+  -moz-box-shadow: 5px 5px 10px #555; 
+  box-shadow: 5px 5px 10px #555; 
 }
 #leftBox, #rightBox{
 float: left;
@@ -168,10 +200,7 @@ float: left;
   border-bottom: 1px solid #ccc;
 }
 #current h2{
-  position: absolute;
-  top: -13px;
   padding-right: 8px;
-  background: url(../images/concrete_wall_2.png);
 }
 #djs h2{
   margin-top: 0px;
@@ -215,11 +244,10 @@ ul.links li{
 #content{
   padding: 20px;
 }
-#callouts{
+.callouts{
   font-size: 12px;
-  margin-top: 50px;
 }
-#callouts a{
+.callouts a{
   margin-right: 10px;
 }
 #index h2{

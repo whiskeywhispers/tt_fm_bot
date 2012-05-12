@@ -3,10 +3,12 @@ html
   head
     title= siteTitle+"|"+title
     link(rel="stylesheet", href="/stylesheets/style.css")
+    link(rel="shortcut icon", href="/images/favicon.ico", type="image/x-icon")
     meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    script!= javascript
     script(type="text/javascript")
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-24042802-4']);
+      _gaq.push(['_setAccount', ga_id]);
       _gaq.push(['_trackPageview']);
 
       (function() {
@@ -20,6 +22,7 @@ html
 
   body(class= artistName)
     #header
+      img(src="/images/pprae_monkey.jpg")
       h1
         a(href="/", style="border-bottom:0px")= siteTitle
       ul

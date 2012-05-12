@@ -1,4 +1,5 @@
-var express = require('express');
+var express = require('express')
+  , expose = require('express-expose');
 var mongoose = require('mongoose');
 var settings = require('./site_config');
 var Bot = require('ttapi');
@@ -38,6 +39,7 @@ app.configure(function(){
   app.use(app.router);
   app.use(express.static(__dirname +'/public'));
 });
+app.expose('var ga_id = "' + settings.site.ga_id + '";');
 app.get('/', function(request, response){
       Play.find().sort('timestamp', -1).populate('dj').populate('artist').populate('track').limit(10).run(function(error, songs){
         log_error(error, response);
@@ -145,10 +147,17 @@ app.get('/contact', function(request, response){
 notFound = function(item, response){
   response.render("error.jade", {locals: {title: "Not Found", item: item}});
 }
+
 var port = settings.port || 3000;
-app.listen(port, function(){
-  console.log("Listening on " + port);
-});
+if (settings.site.ip) {
+  app.listen(port, settings.site.ip, function(){
+    console.log("Listening on " + settings.site.ip + ":" + port);
+  });
+} else {
+  app.listen(port, function(){
+    console.log("Listening on " + port);
+  });
+}
 
 log_error = function(err, resp){
   if(err){

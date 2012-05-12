@@ -14,6 +14,7 @@ var Artist = new Schema({
     bandcamp: String,
     facebook: String,
     website: String,
+    twitter: String,
     lastfm: String
   }
 });
