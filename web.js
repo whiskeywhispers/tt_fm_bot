@@ -105,7 +105,7 @@ app.get('/djs/:name', function(request, response){
   Dj.find({name: request.params.name}, function(error, dj){
     log_error(error, response);
     if(dj.length === 0){notFound(request.params.name, response);return;}
-    Play.find({dj: dj[0]._id}).sort('timestamp', -1).populate('track').limit(20).run(function(error, plays){
+    Play.find({dj: dj[0]._id}).sort('timestamp', -1).populate('track').populate('artist').limit(20).run(function(error, plays){
       log_error(error, response);
       response.render("djs/show.jade", { locals: {
         title: dj[0].name,

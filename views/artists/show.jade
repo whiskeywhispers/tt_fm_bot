@@ -1,5 +1,5 @@
 #artistHead
-  h2= artist.name
+  h1= artist.name
   div.plays= "Plays: "+artist.plays
   div.awesomes= "Awesomes: "+artist.upvotes
 #leftBox
@@ -11,10 +11,11 @@
       li.link: a(href=artist.links.bandcamp, target="_blank")="Bandcamp"
     if artist.links.facebook
       li.link: a(href=artist.links.facebook, target="_blank")="Facebook"
-    if artist.links.twitter
-      li.link: a(href=artist.links.twitter, target="_blank")="Twitter"
     if artist.links.lastfm
       li.link: a(href=artist.links.lastfm, target="_blank")="Last.fm"
+    if artist.links.twitter
+      a(href=artist.links.twitter, class="twitter-follow-button", data-show-count="true", data-lang="en")="Follow @"
+      | <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   h2="Top Awesomed Tracks:"
   ul.top-tracks
     each track in topTracks

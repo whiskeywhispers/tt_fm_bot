@@ -1,5 +1,5 @@
 #djHead
-  h2= dj.name
+  h1= dj.name
   div.plays= "Plays: "+dj.plays
   div.awesomes= "Awesomes: "+dj.upvotes
 #leftBox
@@ -11,6 +11,7 @@
       each play in plays
         li.track
           div.trackname= "Track: "+play.track.name
+          div.artistname= "Artist: "+play.artist.name
           div.albumname= "Album: "+play.track.album
           div.meta
             div.time= "Played on "+new Date(play.timestamp*1000).toLocaleDateString()+" "
