@@ -3,3 +3,4 @@ config/
 config/**/*
 Capfile
 site_config.js
+site_config.local.js

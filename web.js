@@ -151,6 +151,7 @@ notFound = function(item, response){
 var port = settings.port || 3000;
 if (settings.site.ip) {
   app.listen(port, settings.site.ip, function(){
+    console.log("\n #### Started " + settings.site.title + " ####   " + new Date());
     console.log("Listening on " + settings.site.ip + ":" + port);
   });
 } else {

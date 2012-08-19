@@ -5,6 +5,9 @@
 #leftBox
   h2="Links:"
   ul.links
+    if artist.links.twitter
+      a(href=artist.links.twitter, class="twitter-follow-button", data-show-count="true", data-lang="en")="Follow @"
+      | <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     if artist.links.website
       li.link: a(href=artist.links.website, target="_blank")="Website"
     if artist.links.bandcamp
@@ -13,9 +16,6 @@
       li.link: a(href=artist.links.facebook, target="_blank")="Facebook"
     if artist.links.lastfm
       li.link: a(href=artist.links.lastfm, target="_blank")="Last.fm"
-    if artist.links.twitter
-      a(href=artist.links.twitter, class="twitter-follow-button", data-show-count="true", data-lang="en")="Follow @"
-      | <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   h2="Top Awesomed Tracks:"
   ul.top-tracks
     each track in topTracks

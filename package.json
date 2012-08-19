@@ -1,6 +1,7 @@
 {
-  "name": "prab-bot",
-  "version": "0.0.1",
+  "name": "pprae",
+  "version": "0.1.0",
+  "subdomain": "pprae",
   "dependencies": {
     "express": " > 2.2.0",
     "express-expose": " > 0.2.0",
@@ -11,5 +12,11 @@
     "jade":"0.17.0",
     "twitter": "> 0.1",
     "airbrake":">=0.2.0"
+  },
+  "scripts": {
+    "start": "web.js"
+  },
+  "engines": {
+    "node": "0.8.x"
   }
 }
