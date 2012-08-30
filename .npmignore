@@ -1,0 +1,6 @@
+node_modules
+config/
+config/**/*
+Capfile
+site_config.sample.js
+site_config.local.js

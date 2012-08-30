@@ -156,6 +156,7 @@ if (settings.site.ip) {
   });
 } else {
   app.listen(port, function(){
+    console.log("\n #### Started " + settings.site.title + " ####   " + new Date());
     console.log("Listening on " + port);
   });
 }
