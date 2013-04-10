@@ -1,9 +1,9 @@
 #TurntableFM Bot
 
-The code powering the bot in the turntable.fm room: Post-Rock & Beyond
-http://turntable.fm/postrock_beyond
+The code powering the bot in the turntable.fm room: Pop Punk/Rock/Alternative/Emo
+http://pprae.jit.su/
 
-Visit this bot running live at: http://postrockandbeyond.com
+Visit this bot running live at: http://turntable.fm/pop_punkrockalternativeemo
 
 ##Features
 
