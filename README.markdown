@@ -1,7 +1,7 @@
 #TurntableFM Bot
 
 The code powering the bot in the turntable.fm room: Pop Punk/Rock/Alternative/Emo
-http://pprae.jit.su/
+http://bestroomontt.com
 
 Visit this bot running live at: http://turntable.fm/pop_punkrockalternativeemo
 
